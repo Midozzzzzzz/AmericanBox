@@ -1,136 +1,234 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <title>American Box - المنيو</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f8fb;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .pay-info {
-      background-color: #e7f3ff;
-      color: #333;
-      padding: 12px;
-      font-size: 16px;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
-    }
-    .pay-info span {
-      margin: 0 15px;
-      display: inline-block;
-    }
-    .product {
-      background: #fff;
-      margin: 20px auto;
-      max-width: 800px;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .product img {
-      width: 130px;
-      height: 130px;
-      object-fit: contain;
-      margin-left: 20px;
-    }
-    .product-details {
-      flex: 1;
-    }
-    .product-details h3 {
-      margin: 0;
-      font-size: 20px;
-    }
-    .product-details p {
-      margin: 6px 0;
-    }
-    .price {
-      color: #007bff;
-      font-weight: bold;
-    }
-    .cta {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background-color: #28a745;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    footer {
-      background: #333;
-      padding: 20px;
-      text-align: center;
-    }
-    footer a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-    footer img {
-      width: 32px;
-      height: 32px;
-      vertical-align: middle;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>American Box - المنيو الفاخر</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- خطوط جوجل عربية/لاتينية احترافية -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #FAF9F6;
+            --accent-gold: #D4AF37;
+            --accent-mint: #C8E6C9;
+            --accent-lavender: #E6E6FA;
+            --accent-rose: #F5E1DC;
+            --text-black: #000;
+            --text-gray: #333;
+            --navy: #1A237E;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--main-bg);
+            font-family: 'Cairo', 'Montserrat', Arial, sans-serif;
+            color: var(--text-gray);
+        }
+        header {
+            background: var(--navy);
+            color: #fff;
+            padding: 24px 10px 10px 10px;
+            text-align: center;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            border-radius: 0 0 32px 32px;
+        }
+        .pay-info {
+            background: #fff;
+            box-shadow: 0 2px 12px #eee;
+            padding: 8px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            font-size: 1rem;
+        }
+        .pay-info span {
+            margin-left: 5px;
+        }
+        .pay-info a {
+            color: var(--navy);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .products-list {
+            max-width: 650px;
+            margin: 24px auto 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .product-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 32px 0 #e9e7ea;
+            padding: 20px 18px 22px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transition: box-shadow .2s;
+        }
+        .product-card:hover {
+            box-shadow: 0 6px 38px 0 #d4af378a;
+        }
+        .product-image {
+            width: 132px;
+            height: 132px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            background: #F5E1DC;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px #eee;
+        }
+        .product-title {
+            font-size: 1.25rem;
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            color: var(--text-black);
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .product-caption {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            text-align: center;
+            min-height: 38px;
+        }
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+        .product-oldprice {
+            text-decoration: line-through;
+            color: #aaa;
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+        .cta-btn {
+            background: var(--navy);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 34px;
+            font-size: 1.07rem;
+            margin-top: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+            transition: background .15s;
+        }
+        .cta-btn:hover {
+            background: var(--accent-gold);
+            color: var(--text-black);
+        }
+        .out-of-stock {
+            position: absolute;
+            top: 12px; left: 14px;
+            background: #8886;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            z-index: 1;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', 'Cairo', sans-serif;
+        }
+        /* Icons bar */
+        .social-bar {
+            width: 100vw;
+            background: #232325;
+            padding: 20px 0 12px 0;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            border-radius: 24px 24px 0 0;
+        }
+        .social-bar a {
+            color: #fff;
+            font-size: 2rem;
+            text-decoration: none;
+            transition: color .18s;
+        }
+        .social-bar a:hover {
+            color: var(--accent-gold);
+        }
+        @media (max-width: 800px) {
+            header { font-size: 1.1rem; padding: 16px 0 7px 0;}
+            .products-list { gap: 24px; }
+            .product-card { padding: 13px 7px 14px 7px; }
+            .product-image { width: 90px; height: 90px; }
+        }
+    </style>
+    <!-- أيقونات Font Awesome -->
+    <script src="https://kit.fontawesome.com/62ce91be0c.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <div>
+            <span style="font-size:2.4rem;color:#D4AF37;">المـنـيـو</span> - American Box
+        </div>
+    </header>
+    <div class="pay-info">
+        <span>Vodafone Cash: <a href="tel:01044215622">01044215622</a> <i class="fa-solid fa-money-bill-wave"></i></span>
+        <span>Vodafone Cash: <a href="tel:01005613389">01005613389</a> <i class="fa-solid fa-money-bill-wave"></i></span>
+        <span>Instapay: <a href="tel:01095698053">01095698053</a> <i class="fa-regular fa-credit-card"></i></span>
+        <span>Vodafone Cash: <a href="tel:01055000311">01055000311</a> <i class="fa-solid fa-money-bill-wave"></i></span>
+    </div>
+    <div class="products-list">
 
-<header>American Box - المنيو</header>
+        <!-- مثال منتج. كرر الكود وغير بيانات كل منتج وصورته -->
+        <!-- 1 -->
+        <div class="product-card">
+            <img class="product-image" src="YOUR_IMG/magnesium.jpg" alt="Magnesium Glycinate">
+            <div class="product-title">Magnesium Glycinate – Nature’s Truth</div>
+            <div class="product-caption">توازنك الداخلي يستحق رفاهية مغنيسيوم نقي، بمستوى Nature’s Truth.</div>
+            <div class="product-price">950 جنيه</div>
+            <a href="https://wa.me/201040000728" class="cta-btn" target="_blank">اطلب الآن</a>
+        </div>
 
-<div class="pay-info">
-  <span>💳 Instapay: <strong>01095698053</strong></span>
-  <span>💸 Vodafone Cash: <strong>01005613389</strong></span>
-  <span>💸 Vodafone Cash: <strong>01044215622</strong></span>
-</div>
+        <!-- 2 -->
+        <div class="product-card">
+            <img class="product-image" src="YOUR_IMG/lifeextension.jpg" alt="Life Extension">
+            <div class="product-title">Life Extension 120 tab</div>
+            <div class="product-caption">امتلك رفاهية العمر – Life Extension، استثمار في سنواتك القادمة.</div>
+            <div class="product-price">2250 جنيه</div>
+            <a href="https://wa.me/201040000728" class="cta-btn" target="_blank">اطلب الآن</a>
+        </div>
 
-<div class="product">
-  <img src="https://i.imgur.com/UATvVIk.jpeg" alt="Magnesium">
-  <div class="product-details">
-    <h3>Magnesium Glycinate – Nature’s Truth</h3>
-    <p>امتصاص سريع</p>
-    <p class="price">950 جنيه</p>
-    <a class="cta" href="https://wa.me/201055000311">اطلب الآن</a>
-  </div>
-</div>
+        <!-- 3 -->
+        <div class="product-card">
+            <img class="product-image" src="YOUR_IMG/hairburst.jpg" alt="Hair Burst">
+            <div class="product-title">(شامبو + بلسم) Hair Burst</div>
+            <div class="product-caption">غسلة بشعور سبا في لندن – Hair Burst، رفاهية يومية تبدأ من شعرك.</div>
+            <div>
+                <span class="product-oldprice">2400 جنيه</span>
+                <span class="product-price">1650 جنيه</span>
+            </div>
+            <a href="https://wa.me/201040000728" class="cta-btn" target="_blank">اطلب الآن</a>
+        </div>
 
-<div class="product">
-  <img src="https://i.imgur.com/6d8f4RO.jpeg" alt="Hairburst">
-  <div class="product-details">
-    <h3>Hairburst (شامبو + بلسم)</h3>
-    <p>350 مل – UK</p>
-    <p class="price">1650 جنيه <del style="color:#999;">2400</del></p>
-    <a class="cta" href="https://wa.me/201055000311">اطلب الآن</a>
-  </div>
-</div>
+        <!-- ... باقي المنتجات بنفس الشكل ... -->
+        <!-- مثال لمنتج غير متوفر -->
+        <div class="product-card">
+            <span class="out-of-stock">غير متوفر</span>
+            <img class="product-image" src="YOUR_IMG/omega3.jpg" alt="Now Omega 3 EPA DHA">
+            <div class="product-title">Now Omega 3 EPA DHA 1250 mg</div>
+            <div class="product-caption">منتج لا يتوفر بسهولة – الأفضل ينتظر من يعرف قيمته.</div>
+        </div>
 
-<div class="product">
-  <img src="https://i.imgur.com/rFGNGlX.jpeg" alt="Biotin">
-  <div class="product-details">
-    <h3>Biotin 5000 mcg – Nature’s Bounty</h3>
-    <p>صالح حتى نوفمبر 2025</p>
-    <p class="price">625 جنيه <del style="color:#999;">1350</del></p>
-    <a class="cta" href="https://wa.me/201055000311">اطلب الآن</a>
-  </div>
-</div>
+        <!-- كمل باقي المنتجات بنفس القالب -->
+    </div>
 
-<footer>
-  <a href="https://wa.me/201055000311" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" /></a>
-  <a href="https://www.facebook.com/share/1BHkZES4tq/?mibextid=wwXIfr" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" /></a>
-  <a href="https://www.instagram.com/american_box10" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" /></a>
-</footer>
-
+    <!-- سوشيال ميديا -->
+    <div class="social-bar">
+        <a href="https://wa.me/201040000728" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/american_box10" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1BHkZES4tq/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
 </body>
 </html>
