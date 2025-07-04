@@ -1,99 +1,136 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>American Box - المنيو</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-            padding: 20px;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 26px;
-            border-radius: 10px;
-        }
-        .product {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 20px 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-        .product img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            margin-left: 20px;
-        }
-        .product-details {
-            flex: 1;
-            padding: 15px;
-        }
-        .product h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-        .product p {
-            margin: 5px 0;
-        }
-        .cta {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background-color: #27ae60;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .cta:hover {
-            background-color: #219150;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>American Box - المنيو</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f8fb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .pay-info {
+      background-color: #e7f3ff;
+      color: #333;
+      padding: 12px;
+      font-size: 16px;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .pay-info span {
+      margin: 0 15px;
+      display: inline-block;
+    }
+    .product {
+      background: #fff;
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .product img {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      margin-left: 20px;
+    }
+    .product-details {
+      flex: 1;
+    }
+    .product-details h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .product-details p {
+      margin: 6px 0;
+    }
+    .price {
+      color: #007bff;
+      font-weight: bold;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    footer {
+      background: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+    footer img {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+  </style>
 </head>
 <body>
-<header>
-    American Box - منيو المنتجات الأصلية
-</header>
 
-<div class="product">
-    <img src="https://i.imgur.com/6d8f4RO.jpeg" alt="Hairburst">
-    <div class="product-details">
-        <h3>Hairburst (شامبو + بلسم)</h3>
-        <p>350 مل - UK</p>
-        <p><strong>السعر:</strong> 1650 جنيه <span style="color: red;">(بدل 2400)</span></p>
-        <a class="cta" href="https://wa.me/201040000728?text=أريد%20طلب%20Hairburst">اطلب الآن</a>
-    </div>
+<header>American Box - المنيو</header>
+
+<div class="pay-info">
+  <span>💳 Instapay: <strong>01095698053</strong></span>
+  <span>💸 Vodafone Cash: <strong>01005613389</strong></span>
+  <span>💸 Vodafone Cash: <strong>01044215622</strong></span>
 </div>
 
 <div class="product">
-    <img src="https://i.imgur.com/UATvVIk.jpeg" alt="Magnesium Glycinate">
-    <div class="product-details">
-        <h3>Magnesium Glycinate – Nature’s Truth</h3>
-        <p>امتصاص سريع</p>
-        <p><strong>السعر:</strong> 950 جنيه</p>
-        <a class="cta" href="https://wa.me/201040000728?text=أريد%20طلب%20Magnesium%20Glycinate">اطلب الآن</a>
-    </div>
+  <img src="https://i.imgur.com/UATvVIk.jpeg" alt="Magnesium">
+  <div class="product-details">
+    <h3>Magnesium Glycinate – Nature’s Truth</h3>
+    <p>امتصاص سريع</p>
+    <p class="price">950 جنيه</p>
+    <a class="cta" href="https://wa.me/201055000311">اطلب الآن</a>
+  </div>
 </div>
 
 <div class="product">
-    <img src="https://i.imgur.com/rFGNGlX.jpeg" alt="Biotin">
-    <div class="product-details">
-        <h3>Biotin 5000 mcg – Nature’s Bounty</h3>
-        <p>صالح حتى نوفمبر 2025</p>
-        <p><strong>السعر:</strong> 625 جنيه (آخر ٣ عبوات)</p>
-        <a class="cta" href="https://wa.me/201040000728?text=أريد%20طلب%20Biotin%205000%20Nature’s%20Bounty">اطلب الآن</a>
-    </div>
+  <img src="https://i.imgur.com/6d8f4RO.jpeg" alt="Hairburst">
+  <div class="product-details">
+    <h3>Hairburst (شامبو + بلسم)</h3>
+    <p>350 مل – UK</p>
+    <p class="price">1650 جنيه <del style="color:#999;">2400</del></p>
+    <a class="cta" href="https://wa.me/201055000311">اطلب الآن</a>
+  </div>
 </div>
+
+<div class="product">
+  <img src="https://i.imgur.com/rFGNGlX.jpeg" alt="Biotin">
+  <div class="product-details">
+    <h3>Biotin 5000 mcg – Nature’s Bounty</h3>
+    <p>صالح حتى نوفمبر 2025</p>
+    <p class="price">625 جنيه <del style="color:#999;">1350</del></p>
+    <a class="cta" href="https://wa.me/201055000311">اطلب الآن</a>
+  </div>
+</div>
+
+<footer>
+  <a href="https://wa.me/201055000311" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" /></a>
+  <a href="https://www.facebook.com/share/1BHkZES4tq/?mibextid=wwXIfr" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook" /></a>
+  <a href="https://www.instagram.com/american_box10" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram" /></a>
+</footer>
 
 </body>
 </html>
