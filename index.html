@@ -1,234 +1,253 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>American Box - المنيو الفاخر</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- خطوط جوجل عربية/لاتينية احترافية -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --main-bg: #FAF9F6;
-            --accent-gold: #D4AF37;
-            --accent-mint: #C8E6C9;
-            --accent-lavender: #E6E6FA;
-            --accent-rose: #F5E1DC;
-            --text-black: #000;
-            --text-gray: #333;
-            --navy: #1A237E;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background: var(--main-bg);
-            font-family: 'Cairo', 'Montserrat', Arial, sans-serif;
-            color: var(--text-gray);
-        }
-        header {
-            background: var(--navy);
-            color: #fff;
-            padding: 24px 10px 10px 10px;
-            text-align: center;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            font-family: 'Montserrat', 'Cairo', sans-serif;
-            border-radius: 0 0 32px 32px;
-        }
-        .pay-info {
-            background: #fff;
-            box-shadow: 0 2px 12px #eee;
-            padding: 8px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            font-size: 1rem;
-        }
-        .pay-info span {
-            margin-left: 5px;
-        }
-        .pay-info a {
-            color: var(--navy);
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .products-list {
-            max-width: 650px;
-            margin: 24px auto 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-        .product-card {
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 4px 32px 0 #e9e7ea;
-            padding: 20px 18px 22px 18px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            transition: box-shadow .2s;
-        }
-        .product-card:hover {
-            box-shadow: 0 6px 38px 0 #d4af378a;
-        }
-        .product-image {
-            width: 132px;
-            height: 132px;
-            object-fit: contain;
-            margin-bottom: 12px;
-            background: #F5E1DC;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px #eee;
-        }
-        .product-title {
-            font-size: 1.25rem;
-            font-family: 'Montserrat', 'Cairo', sans-serif;
-            color: var(--text-black);
-            font-weight: bold;
-            margin-bottom: 6px;
-            text-align: center;
-        }
-        .product-caption {
-            font-size: 1rem;
-            color: var(--accent-gold);
-            margin-bottom: 10px;
-            text-align: center;
-            min-height: 38px;
-        }
-        .product-price {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: var(--navy);
-        }
-        .product-oldprice {
-            text-decoration: line-through;
-            color: #aaa;
-            font-size: 1rem;
-            margin-left: 10px;
-        }
-        .cta-btn {
-            background: var(--navy);
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            padding: 10px 34px;
-            font-size: 1.07rem;
-            margin-top: 10px;
-            cursor: pointer;
-            font-family: 'Montserrat', 'Cairo', sans-serif;
-            transition: background .15s;
-        }
-        .cta-btn:hover {
-            background: var(--accent-gold);
-            color: var(--text-black);
-        }
-        .out-of-stock {
-            position: absolute;
-            top: 12px; left: 14px;
-            background: #8886;
-            color: #fff;
-            padding: 6px 16px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: bold;
-            z-index: 1;
-            letter-spacing: 1px;
-            font-family: 'Montserrat', 'Cairo', sans-serif;
-        }
-        /* Icons bar */
-        .social-bar {
-            width: 100vw;
-            background: #232325;
-            padding: 20px 0 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            border-radius: 24px 24px 0 0;
-        }
-        .social-bar a {
-            color: #fff;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: color .18s;
-        }
-        .social-bar a:hover {
-            color: var(--accent-gold);
-        }
-        @media (max-width: 800px) {
-            header { font-size: 1.1rem; padding: 16px 0 7px 0;}
-            .products-list { gap: 24px; }
-            .product-card { padding: 13px 7px 14px 7px; }
-            .product-image { width: 90px; height: 90px; }
-        }
-    </style>
-    <!-- أيقونات Font Awesome -->
-    <script src="https://kit.fontawesome.com/62ce91be0c.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>American Box</title>
+  <style>
+    body { font-family: Tahoma, 'Segoe UI', Arial, sans-serif; margin: 0; background: #fff; color: #333; }
+    header { background: #fff; text-align: center; padding: 25px 10px 10px 10px; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 99; }
+    .logo { width: 54px; vertical-align: middle; margin-left: 12px; margin-bottom: 5px;}
+    .brand-name { font-size: 32px; font-weight: bold; letter-spacing: 1px; color: #1A237E; display: inline-block; vertical-align: middle;}
+    .pay-section { margin: 12px 0 0 0; font-size: 15px; text-align: center;}
+    .pay-item { display: flex; justify-content: center; align-items: center; gap: 7px; margin-bottom: 2px; font-size: 15px;}
+    .pay-label { font-weight: bold; color: #C70039;}
+    .icon { width: 22px; vertical-align: middle;}
+    .social-icons { margin: 15px 0 0 0; text-align: center;}
+    .social-icons a { display: inline-block; margin: 0 5px;}
+    .social-icons img { width: 31px; height: 31px; border-radius: 50%; transition: 0.2s; vertical-align: middle;}
+    .social-icons img:hover { transform: scale(1.12);}
+    .products-list { max-width: 500px; margin: 20px auto 25px auto; padding: 0 6px;}
+    .product-card { background: #fff; border-radius: 14px; box-shadow: 0 1px 8px #ececec; margin-bottom: 19px; padding: 18px 13px; display: flex; gap: 12px; align-items: center; position: relative;}
+    .product-img { width: 82px; height: 82px; object-fit: contain; border-radius: 11px; border: 1.5px solid #efefef; background: #fafafa;}
+    .product-info { flex: 1;}
+    .product-title { font-weight: bold; font-size: 18px; color: #222; margin-bottom: 5px; line-height: 1.25;}
+    .product-desc { font-size: 15px; color: #AF7AC5; margin-bottom: 6px;}
+    .product-price { font-size: 17px; font-weight: bold; color: #1A237E; margin-bottom: 2px;}
+    .product-old { font-size: 15px; color: #aaa; text-decoration: line-through; margin-right: 6px; font-weight: 400;}
+    .not-available { background: #e3e3e3; color: #b10000; padding: 2px 7px; border-radius: 7px; font-size: 12px; position: absolute; left: 10px; top: 10px;}
+    .cta-btn { margin-top: 7px; background: #1A237E; color: #fff; border: none; border-radius: 7px; font-size: 15px; padding: 7px 17px; cursor: pointer; text-decoration: none; display: inline-block; transition: 0.2s;}
+    .cta-btn:hover { background: #3949ab; }
+    @media (max-width: 650px) {
+      .product-card { flex-direction: column; align-items: flex-start; }
+      .product-img { width: 110px; height: 110px; margin-bottom: 8px; }
+      .brand-name { font-size: 23px;}
+      header { padding-bottom: 8px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div>
-            <span style="font-size:2.4rem;color:#D4AF37;">المـنـيـو</span> - American Box
-        </div>
-    </header>
-    <div class="pay-info">
-        <span>Vodafone Cash: <a href="tel:01044215622">01044215622</a> <i class="fa-solid fa-money-bill-wave"></i></span>
-        <span>Vodafone Cash: <a href="tel:01005613389">01005613389</a> <i class="fa-solid fa-money-bill-wave"></i></span>
-        <span>Instapay: <a href="tel:01095698053">01095698053</a> <i class="fa-regular fa-credit-card"></i></span>
-        <span>Vodafone Cash: <a href="tel:01055000311">01055000311</a> <i class="fa-solid fa-money-bill-wave"></i></span>
+  <header>
+    <img src="https://i.imgur.com/SBzQpT5.png" class="logo" alt="logo">
+    <span class="brand-name">American Box</span>
+    <div class="pay-section">
+      <div class="pay-item">
+        <span class="pay-label"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Vodafone_icon.svg/32px-Vodafone_icon.svg.png" class="icon" alt="vodafone"> Vodafone Cash:</span>
+      </div>
+      <div class="pay-item" style="margin-right: 22px;"><span>01005613389</span></div>
+      <div class="pay-item" style="margin-right: 22px;"><span>01044215622</span></div>
+      <div class="pay-item">
+        <span class="pay-label"><img src="https://instapay.eg/assets/img/logo.png" class="icon" alt="instapay"> Instapay:</span>
+        <span>01095698053</span>
+      </div>
+      <div class="pay-item">
+        <span class="pay-label"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="icon" alt="whatsapp"> واتساب:</span>
+        <a href="https://wa.me/201040000728">01040000728</a>
+        <span style="margin:0 3px"></span>
+        <a href="https://wa.me/201055000311">01055000311</a>
+      </div>
     </div>
-    <div class="products-list">
-
-        <!-- مثال منتج. كرر الكود وغير بيانات كل منتج وصورته -->
-        <!-- 1 -->
-        <div class="product-card">
-            <img class="product-image" src="YOUR_IMG/magnesium.jpg" alt="Magnesium Glycinate">
-            <div class="product-title">Magnesium Glycinate – Nature’s Truth</div>
-            <div class="product-caption">توازنك الداخلي يستحق رفاهية مغنيسيوم نقي، بمستوى Nature’s Truth.</div>
-            <div class="product-price">950 جنيه</div>
-            <a href="https://wa.me/201040000728" class="cta-btn" target="_blank">اطلب الآن</a>
-        </div>
-
-        <!-- 2 -->
-        <div class="product-card">
-            <img class="product-image" src="YOUR_IMG/lifeextension.jpg" alt="Life Extension">
-            <div class="product-title">Life Extension 120 tab</div>
-            <div class="product-caption">امتلك رفاهية العمر – Life Extension، استثمار في سنواتك القادمة.</div>
-            <div class="product-price">2250 جنيه</div>
-            <a href="https://wa.me/201040000728" class="cta-btn" target="_blank">اطلب الآن</a>
-        </div>
-
-        <!-- 3 -->
-        <div class="product-card">
-            <img class="product-image" src="YOUR_IMG/hairburst.jpg" alt="Hair Burst">
-            <div class="product-title">(شامبو + بلسم) Hair Burst</div>
-            <div class="product-caption">غسلة بشعور سبا في لندن – Hair Burst، رفاهية يومية تبدأ من شعرك.</div>
-            <div>
-                <span class="product-oldprice">2400 جنيه</span>
-                <span class="product-price">1650 جنيه</span>
-            </div>
-            <a href="https://wa.me/201040000728" class="cta-btn" target="_blank">اطلب الآن</a>
-        </div>
-
-        <!-- ... باقي المنتجات بنفس الشكل ... -->
-        <!-- مثال لمنتج غير متوفر -->
-        <div class="product-card">
-            <span class="out-of-stock">غير متوفر</span>
-            <img class="product-image" src="YOUR_IMG/omega3.jpg" alt="Now Omega 3 EPA DHA">
-            <div class="product-title">Now Omega 3 EPA DHA 1250 mg</div>
-            <div class="product-caption">منتج لا يتوفر بسهولة – الأفضل ينتظر من يعرف قيمته.</div>
-        </div>
-
-        <!-- كمل باقي المنتجات بنفس القالب -->
+    <div class="social-icons">
+      <a href="https://www.instagram.com/american_box10" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/share/1Gbyf6SbLU/?mibextid=wwXIfr" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://wa.me/201040000728" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
     </div>
+  </header>
+  <div class="products-list">
 
-    <!-- سوشيال ميديا -->
-    <div class="social-bar">
-        <a href="https://wa.me/201040000728" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/american_box10" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/share/1BHkZES4tq/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-</body>
-</html>
+<!-- =========== هنا المنتجات Copy-Paste مع التعديل على الصور عندك =========== -->
+<div class="product-card">
+  <img class="product-img" src="magnesium.jpg" alt="Magnesium Glycinate">
+  <div class="product-info">
+    <div class="product-title">Magnesium Glycinate – Nature’s Truth</div>
+    <div class="product-desc">توازنك الداخلي يستحق رفاهية مغنيسيوم نقي، بمستوى Nature’s Truth.</div>
+    <div class="product-price">950 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="life_extension.jpg" alt="Life Extension">
+  <div class="product-info">
+    <div class="product-title">Life Extension 120 tab</div>
+    <div class="product-desc">امتلك رفاهية العمر – Life Extension، استثمار في سنواتك القادمة.</div>
+    <div class="product-price">2250 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="hairburst.jpg" alt="Hair Burst">
+  <div class="product-info">
+    <div class="product-title">Hair Burst (شامبو + بلسم)</div>
+    <div class="product-desc">غسلة بشعور سبا في لندن – Hair Burst، رفاهية يومية تبدأ من شعرك.</div>
+    <span class="product-old">2400</span>
+    <span class="product-price">1650 جنيه</span>
+    <div style="color:#D4AF37; font-size:13px;">عرض لمدة 5 أيام فقط</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="tumeric_truth.jpg" alt="Nature’s Truth Tumeric">
+  <div class="product-info">
+    <div class="product-title">Nature’s Truth Tumeric Curcumin</div>
+    <div class="product-desc">كركم استثنائي لصحة من الطراز الأول – فقط مع Nature’s Truth.</div>
+    <div class="product-price">1350 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="maryruths.jpg" alt="Mary Ruth’s 450 ml">
+  <div class="product-info">
+    <div class="product-title">Mary Ruth’s 450 ml</div>
+    <div class="product-desc">كل رشفة قصة رفاهية نباتية – Mary Ruth’s، نقاء يُشرب.</div>
+    <div class="product-price">2600 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="viviscal.jpg" alt="Viviscal 60 قرص">
+  <div class="product-info">
+    <div class="product-title">Viviscal 60 قرص</div>
+    <div class="product-desc">شعرك… اللمسة اللي تحكي فخامتك – Viviscal، الاختيار النخبوي.</div>
+    <div class="product-price">2850 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="pueraria.jpg" alt="Pueraria Mirifica – Natural Curvy">
+  <div class="product-info">
+    <div class="product-title">Pueraria Mirifica – Natural Curvy</div>
+    <div class="product-desc">أنوثة بمقاييس ذهبية – Natural Curvy، تركيبة النخبة.</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="now_tumeric.jpg" alt="Now Tumeric Softgel 60 cap">
+  <div class="product-info">
+    <div class="product-title">Now Tumeric Softgel 60 cap</div>
+    <div class="product-desc">مش بس مكمل – تجربة صحة مدروسة بمقاييس Now.</div>
+    <div class="product-price">1300 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="sports_omega3.jpg" alt="Sports Research Omega 3">
+  <div class="product-info">
+    <div class="product-title">Sports Research Omega 3 – 180 cap</div>
+    <div class="product-desc">أوميغا 3 على مستوى رجال المال والأعمال – نقاء يليق بك.</div>
+    <div class="product-old">4200</div>
+    <div class="product-price">1260 جنيه <span style="font-size:13px;color:#D4AF37">(عرض القطعة الثانية)</span></div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="selenium.jpg" alt="Selenium 200 mcg">
+  <div class="product-info">
+    <div class="product-title">Selenium 200 mcg</div>
+    <div class="product-desc">أصغر تفصيلة بتكمل مظهرك من الداخل – سيلينيوم نخب أول.</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="sharava_nmn.jpg" alt="Sharava NMN – Powder">
+  <div class="product-info">
+    <div class="product-title">Sharava NMN – Powder</div>
+    <div class="product-desc">السر وراء شباب أبدي؟ Sharava NMN، رفاهية على مستوى الجين.</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="magnesium_mind.jpg" alt="Magnesium Mind">
+  <div class="product-info">
+    <div class="product-title">Magnesium Mind</div>
+    <div class="product-desc">ذهنك يستحق وضوح بترف – Magnesium Mind، صفاء مدروس.</div>
+    <div class="product-price">1200 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="magnesium_liquid.jpg" alt="Magnesium Glycinate Liquid">
+  <div class="product-info">
+    <div class="product-title">Magnesium Glycinate Liquid</div>
+    <div class="product-desc">لكل من يقدّر التفاصيل النقية – Magnesium سائل، نقاء فائق الجودة.</div>
+    <div class="product-price">1100 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="now_mg_glycinate.jpg" alt="Now MG Glycinate 180 cap">
+  <div class="product-info">
+    <div class="product-title">Now MG Glycinate 180 cap</div>
+    <div class="product-desc">مغنيسيوم بنقاء يناسب فنجان قهوتك المختصة – Now.</div>
+    <span class="product-old">2550</span>
+    <span class="product-price">1999 جنيه</span>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="pharmaxxi_nmn.jpg" alt="Pharmaxxi NMN">
+  <div class="product-info">
+    <div class="product-title">Pharmaxxi NMN</div>
+    <div class="product-desc">أنت أول من يعرف، وأول من يستفيد – Pharmaxxi، علم وفخامة.</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="collagen_complex.jpg" alt="Collagen Complex">
+  <div class="product-info">
+    <div class="product-title">Collagen Complex – Advanced Formula</div>
+    <div class="product-desc">للبشرة اللي تحكي عنك قبل كلماتك – تركيبة متقدمة للنخبة فقط.</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="wellman_teen.jpg" alt="Wellman Him Teen">
+  <div class="product-info">
+    <div class="product-title">Wellman Him (13–19 years)</div>
+    <div class="product-desc">جيل جديد من النخبة يبدأ من هنا – Wellman Him.</div>
+    <div class="product-price">800 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="wellman_teen_mental.jpg" alt="Wellman Him Mental">
+  <div class="product-info">
+    <div class="product-title">Wellman Him (13–19) Mental performance</div>
+    <div class="product-desc">الذكاء رفاهية – Wellman، أداء ذهني من مستوى المديرين التنفيذيين.</div>
+    <div class="product-price">850 جنيه</div>
+    <a href="https://wa.me/201040000728" class="cta-btn">اطلب الآن</a>
+  </div>
+</div>
+
+<div class="product-card">
+  <img class="product-img" src="wellman_sport.jpg" alt="Wellman Sport">
+  <div class="product-info">
+    <div class="product-title">Wellman Sport ⚽</div>
+    <div class="product-desc">ما بين الملاعب ومجلس الإدارة – Wellman Sport، طاقة راقية.</div>
+    <div class="product-price">
